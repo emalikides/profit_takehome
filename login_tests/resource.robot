@@ -9,23 +9,14 @@ Library           SeleniumLibrary
 *** Variables ***
 ${SERVER}         www.reddit.com
 ${BROWSER}        Firefox
-${DELAY}          10
-${VALID USER}     demo
-${VALID PASSWORD}   W44t
+${DELAY}          2
+${VALID USER}     ExtraManagement8215
+${VALID EMAIL}    bob@hotmail.com
+${VALID PASSWORD}   W44tW44t
 ${LOGIN URL}      https://${SERVER}/login/
-${SIGNUP URL}     https://${SERVER}/account/register/
 ${ERROR URL}      https://${SERVER}/error.html
 
 *** Keywords ***
-Open Browser To Signup Page
-    Open Browser    ${SIGNUP URL}    ${BROWSER}
-    Maximize Browser Window
-    Set Selenium Speed    ${DELAY}
-    Signup Page Should Be Open
-
-Signup Page Should Be Open
-    Title Should Be reddit.com: Join the worldwide conversation
-
 Open Browser To Login Page
     Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
@@ -33,24 +24,23 @@ Open Browser To Login Page
     Login Page Should Be Open
 
 Login Page Should Be Open
-    Title Should Be Reddit - Dive into anything
+    Title Should Be     reddit.com: Log in
 
+Input User
+    [Arguments]    ${user}
+    Input Text      loginUsername       ${user}
+
+Input Password
+    [Arguments]    ${password}
+    Input Text      loginPassword    ${password}
+
+Submit Credentials
+    Click Element         class:AnimatedForm__submitButton.m-full-width
+
+Welcome Page Should Be Open
+    Location Should Be    https://${SERVER}/
+    Title Should Be     Reddit - Dive into anything
 
 Go To Login Page
     Go To    ${LOGIN URL}
     Login Page Should Be Open
-
-Input Username
-    [Arguments]    ${username}
-    Input Text    username_field    ${username}
-
-Input Password
-    [Arguments]    ${password}
-    Input Text    password_field    ${password}
-
-Submit Credentials
-    Click Button    login_button
-
-Welcome Page Should Be Open
-    Location Should Be    ${WELCOME URL}
-    Title Should Be    Welcome Page

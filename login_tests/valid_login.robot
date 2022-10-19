@@ -1,11 +1,13 @@
 *** Settings ***
-Documentation     A test suite with tests for signup and logging in.
+Documentation     A test suite with tests for logging into a dummy reddit.
 ...
-...               This test has a workflow that is created using keywords in
-...               the imported resource file.
 Resource          resource.robot
 
 *** Test Cases ***
 Valid Login
-    Open Browser To Signup Page
+    Open Browser To Login Page
+    Input User      ${VALID USER}
+    Input Password      ${VALID PASSWORD}
+    Submit Credentials
+    Welcome Page Should Be Open
     [Teardown]    Close Browser
