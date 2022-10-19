@@ -16,15 +16,17 @@ Use different kind of selectors and elements
 Send us git repo link or zip archive with source code
 
 ## Solution
-**to run**
+### to run
 robot login_tests
 
-**choices**
+### choices
 Browser : Firefox
 website : reddit.com
 Python  : 3.6
 
-**notes**
+See requirments.txt, and appropriately initialise virtualenv.
+
+### notes
 Over about 3-4 hours I familiarised myself with some of the Selenium/Robot
 framework syntax, worked through the quickstart and edited it for reddit.
 
