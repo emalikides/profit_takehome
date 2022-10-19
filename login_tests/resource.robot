@@ -52,9 +52,6 @@ DropDownMenu Should Be Visible
 Click LogOut
     ${logout_btn}=       Execute JavaScript      return [... document.querySelectorAll('span')].filter((el)=>(el.textContent === 'Log Out'))[0]
     Click Element       ${logout_btn}
-    Sleep       5
-    Username Should Not Be Visible
-    Sleep       5
 
 
 Username Should Not Be Visible
