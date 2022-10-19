@@ -46,7 +46,20 @@ Click UserDropDown
 
 DropDownMenu Should Be Visible
     ${dropdownmenu}=   Get WebElement        css:div[role='menu']
-    Variable Should Exist       ${dropdownmenu}     
+    Should Not Be Equal As Strings      ${dropdownmenu}         None    
+
+
+Click LogOut
+    ${logout_btn}=       Execute JavaScript      return [... document.querySelectorAll('span')].filter((el)=>(el.textContent === 'Log Out'))[0]
+    Click Element       ${logout_btn}
+    Sleep       5
+    Username Should Not Be Visible
+    Sleep       5
+
+
+Username Should Not Be Visible
+    ${username_el}=       Execute JavaScript      return [... document.querySelectorAll('span')].filter((el)=>(el.textContent === '${VALID USER}'))[0]
+    Should Be Equal As Strings      ${username_el}      None
 
 
 

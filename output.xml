@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.6.0 on darwin)" generated="20221019 16:14:39.745" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.6.0 on darwin)" generated="20221019 17:26:51.957" rpa="false" schemaversion="3">
 <suite id="s1" name="Login Tests" source="/Users/purulentpig2/Desktop/github/profit_takehome/login_tests">
 <suite id="s1-s1" name="Valid Login" source="/Users/purulentpig2/Desktop/github/profit_takehome/login_tests/valid_login.robot">
 <test id="s1-s1-t1" name="Valid Login" line="7">
@@ -8,29 +8,29 @@
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221019 16:14:40.306" level="INFO">Opening browser 'Firefox' to base url 'https://www.reddit.com/login/'.</msg>
-<msg timestamp="20221019 16:14:40.307" level="INFO">Firefox driver log is always forced to to: /Users/purulentpig2/Desktop/github/profit_takehome/geckodriver-5.log</msg>
-<status status="PASS" starttime="20221019 16:14:40.305" endtime="20221019 16:14:49.375"/>
+<msg timestamp="20221019 17:26:52.476" level="INFO">Opening browser 'Firefox' to base url 'https://www.reddit.com/login/'.</msg>
+<msg timestamp="20221019 17:26:52.478" level="INFO">Firefox driver log is always forced to to: /Users/purulentpig2/Desktop/github/profit_takehome/geckodriver-19.log</msg>
+<status status="PASS" starttime="20221019 17:26:52.475" endtime="20221019 17:27:00.932"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221019 16:14:49.379" endtime="20221019 16:14:49.859"/>
+<status status="PASS" starttime="20221019 17:27:00.937" endtime="20221019 17:27:01.433"/>
 </kw>
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>${DELAY}</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20221019 16:14:49.860" endtime="20221019 16:14:49.863"/>
+<status status="PASS" starttime="20221019 17:27:01.434" endtime="20221019 17:27:01.438"/>
 </kw>
 <kw name="Login Page Should Be Open" library="resource">
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>reddit.com: Log in</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221019 16:14:51.871" level="INFO">Page title is 'reddit.com: Log in'.</msg>
-<status status="PASS" starttime="20221019 16:14:49.865" endtime="20221019 16:14:51.872"/>
+<msg timestamp="20221019 17:27:03.448" level="INFO">Page title is 'reddit.com: Log in'.</msg>
+<status status="PASS" starttime="20221019 17:27:01.441" endtime="20221019 17:27:03.448"/>
 </kw>
-<status status="PASS" starttime="20221019 16:14:49.863" endtime="20221019 16:14:51.872"/>
+<status status="PASS" starttime="20221019 17:27:01.439" endtime="20221019 17:27:03.449"/>
 </kw>
-<status status="PASS" starttime="20221019 16:14:40.304" endtime="20221019 16:14:51.872"/>
+<status status="PASS" starttime="20221019 17:26:52.474" endtime="20221019 17:27:03.449"/>
 </kw>
 <kw name="Input User" library="resource">
 <arg>${VALID USER}</arg>
@@ -38,10 +38,10 @@
 <arg>loginUsername</arg>
 <arg>${user}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221019 16:14:51.879" level="INFO">Typing text 'ExtraManagement8215' into text field 'loginUsername'.</msg>
-<status status="PASS" starttime="20221019 16:14:51.875" endtime="20221019 16:14:57.988"/>
+<msg timestamp="20221019 17:27:03.457" level="INFO">Typing text 'ExtraManagement8215' into text field 'loginUsername'.</msg>
+<status status="PASS" starttime="20221019 17:27:03.452" endtime="20221019 17:27:09.569"/>
 </kw>
-<status status="PASS" starttime="20221019 16:14:51.873" endtime="20221019 16:14:57.988"/>
+<status status="PASS" starttime="20221019 17:27:03.451" endtime="20221019 17:27:09.570"/>
 </kw>
 <kw name="Input Password" library="resource">
 <arg>${VALID PASSWORD}</arg>
@@ -49,85 +49,137 @@
 <arg>loginPassword</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221019 16:14:57.991" level="INFO">Typing text 'W44tW44t' into text field 'loginPassword'.</msg>
-<status status="PASS" starttime="20221019 16:14:57.990" endtime="20221019 16:15:04.072"/>
+<msg timestamp="20221019 17:27:09.572" level="INFO">Typing text 'W44tW44t' into text field 'loginPassword'.</msg>
+<status status="PASS" starttime="20221019 17:27:09.571" endtime="20221019 17:27:15.641"/>
 </kw>
-<status status="PASS" starttime="20221019 16:14:57.989" endtime="20221019 16:15:04.073"/>
+<status status="PASS" starttime="20221019 17:27:09.570" endtime="20221019 17:27:15.641"/>
 </kw>
 <kw name="Submit Credentials" library="resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>class:AnimatedForm__submitButton.m-full-width</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221019 16:15:04.076" level="INFO">Clicking element 'class:AnimatedForm__submitButton.m-full-width'.</msg>
-<status status="PASS" starttime="20221019 16:15:04.075" endtime="20221019 16:15:08.320"/>
+<msg timestamp="20221019 17:27:15.645" level="INFO">Clicking element 'class:AnimatedForm__submitButton.m-full-width'.</msg>
+<status status="PASS" starttime="20221019 17:27:15.644" endtime="20221019 17:27:19.893"/>
 </kw>
-<status status="PASS" starttime="20221019 16:15:04.074" endtime="20221019 16:15:08.320"/>
+<status status="PASS" starttime="20221019 17:27:15.642" endtime="20221019 17:27:19.894"/>
 </kw>
 <kw name="Welcome Page Should Be Open" library="resource">
 <kw name="Location Should Be" library="SeleniumLibrary">
 <arg>https://${SERVER}/</arg>
 <doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20221019 16:15:10.327" level="INFO">Current location is 'https://www.reddit.com/'.</msg>
-<status status="PASS" starttime="20221019 16:15:08.322" endtime="20221019 16:15:10.328"/>
+<msg timestamp="20221019 17:27:21.907" level="INFO">Current location is 'https://www.reddit.com/'.</msg>
+<status status="PASS" starttime="20221019 17:27:19.895" endtime="20221019 17:27:21.907"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Reddit - Dive into anything</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20221019 16:15:12.353" level="INFO">Page title is 'Reddit - Dive into anything'.</msg>
-<status status="PASS" starttime="20221019 16:15:10.328" endtime="20221019 16:15:12.354"/>
+<msg timestamp="20221019 17:27:23.952" level="INFO">Page title is 'Reddit - Dive into anything'.</msg>
+<status status="PASS" starttime="20221019 17:27:21.908" endtime="20221019 17:27:23.953"/>
 </kw>
-<status status="PASS" starttime="20221019 16:15:08.321" endtime="20221019 16:15:12.354"/>
+<status status="PASS" starttime="20221019 17:27:19.894" endtime="20221019 17:27:23.953"/>
 </kw>
 <kw name="Click UserDropDown" library="resource">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>USER_DROPDOWN_ID</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221019 16:15:12.356" level="INFO">Clicking button 'USER_DROPDOWN_ID'.</msg>
-<status status="PASS" starttime="20221019 16:15:12.356" endtime="20221019 16:15:20.863"/>
+<msg timestamp="20221019 17:27:23.956" level="INFO">Clicking button 'USER_DROPDOWN_ID'.</msg>
+<status status="PASS" starttime="20221019 17:27:23.955" endtime="20221019 17:27:33.049"/>
 </kw>
-<status status="PASS" starttime="20221019 16:15:12.355" endtime="20221019 16:15:20.866"/>
+<status status="PASS" starttime="20221019 17:27:23.954" endtime="20221019 17:27:33.050"/>
 </kw>
 <kw name="DropDownMenu Should Be Visible" library="resource">
 <kw name="Get WebElement" library="SeleniumLibrary">
 <var>${dropdownmenu}</var>
-<arg>css:div[role='menuu']</arg>
+<arg>css:div[role='menu']</arg>
 <doc>Returns the first WebElement matching the given ``locator``.</doc>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20221019 16:15:25.159" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20221019 16:15:22.882" endtime="20221019 16:15:25.160"/>
+<msg timestamp="20221019 17:27:35.065" level="INFO">${dropdownmenu} = &lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="b446d715-968e-47c8-b813-2f1db71e8b06", element="f97d7955-8a5c-4b1d-9ff2-77b374b5c459")&gt;</msg>
+<status status="PASS" starttime="20221019 17:27:33.052" endtime="20221019 17:27:35.066"/>
 </kw>
-<msg timestamp="20221019 16:15:25.165" level="FAIL">Element with locator 'css:div[role='menuu']' not found.</msg>
-<status status="FAIL" starttime="20221019 16:15:20.868" endtime="20221019 16:15:25.174"/>
-</kw>
-<kw name="Variable Should Exist" library="BuiltIn">
+<kw name="Should Not Be Equal As Strings" library="BuiltIn">
 <arg>${dropdownmenu}</arg>
-<doc>Fails unless the given variable exists within the current scope.</doc>
-<status status="NOT RUN" starttime="20221019 16:15:25.175" endtime="20221019 16:15:25.175"/>
+<arg>None</arg>
+<doc>Fails if objects are equal after converting them to strings.</doc>
+<msg timestamp="20221019 17:27:35.068" level="INFO">Argument types are:
+&lt;class 'selenium.webdriver.firefox.webelement.FirefoxWebElement'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20221019 17:27:35.066" endtime="20221019 17:27:35.068"/>
 </kw>
-<status status="FAIL" starttime="20221019 16:15:20.867" endtime="20221019 16:15:25.183"/>
+<status status="PASS" starttime="20221019 17:27:33.051" endtime="20221019 17:27:35.068"/>
+</kw>
+<kw name="Click LogOut" library="resource">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${logout_btn}</var>
+<arg>return [... document.querySelectorAll('span')].filter((el)=&gt;(el.textContent === 'Log Out'))[0]</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20221019 17:27:35.079" level="INFO">Executing JavaScript:
+return [... document.querySelectorAll('span')].filter((el)=&gt;(el.textContent === 'Log Out'))[0]
+Without any arguments.</msg>
+<msg timestamp="20221019 17:27:37.096" level="INFO">${logout_btn} = &lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="b446d715-968e-47c8-b813-2f1db71e8b06", element="fb27177a-b6ee-47b9-87a6-e153ccf9b137")&gt;</msg>
+<status status="PASS" starttime="20221019 17:27:35.070" endtime="20221019 17:27:37.096"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${logout_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221019 17:27:37.098" level="INFO">Clicking element '&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session="b446d715-968e-47c8-b813-2f1db71e8b06", element="fb27177a-b6ee-47b9-87a6-e153ccf9b137")&gt;'.</msg>
+<status status="PASS" starttime="20221019 17:27:37.097" endtime="20221019 17:27:39.337"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221019 17:27:44.338" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221019 17:27:39.337" endtime="20221019 17:27:44.339"/>
+</kw>
+<kw name="Username Should Not Be Visible" library="resource">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${username_el}</var>
+<arg>return [... document.querySelectorAll('span')].filter((el)=&gt;(el.textContent === '${VALID USER}'))[0]</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20221019 17:27:44.345" level="INFO">Executing JavaScript:
+return [... document.querySelectorAll('span')].filter((el)=&gt;(el.textContent === 'ExtraManagement8215'))[0]
+Without any arguments.</msg>
+<msg timestamp="20221019 17:27:46.376" level="INFO">${username_el} = None</msg>
+<status status="PASS" starttime="20221019 17:27:44.341" endtime="20221019 17:27:46.376"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${username_el}</arg>
+<arg>None</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20221019 17:27:46.378" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20221019 17:27:46.377" endtime="20221019 17:27:46.379"/>
+</kw>
+<status status="PASS" starttime="20221019 17:27:44.340" endtime="20221019 17:27:46.379"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221019 17:27:51.382" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221019 17:27:46.379" endtime="20221019 17:27:51.382"/>
+</kw>
+<status status="PASS" starttime="20221019 17:27:35.069" endtime="20221019 17:27:51.383"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221019 16:15:25.185" endtime="20221019 16:15:28.811"/>
+<status status="PASS" starttime="20221019 17:27:51.384" endtime="20221019 17:27:55.719"/>
 </kw>
-<status status="FAIL" starttime="20221019 16:14:40.300" endtime="20221019 16:15:28.812">Element with locator 'css:div[role='menuu']' not found.</status>
+<status status="PASS" starttime="20221019 17:26:52.471" endtime="20221019 17:27:55.720"/>
 </test>
-<doc>A test suite with tests for logging into a dummy reddit.
+<doc>A test suite with tests for logging into and out of a dummy reddit account.
 </doc>
-<status status="FAIL" starttime="20221019 16:14:39.803" endtime="20221019 16:15:28.815"/>
+<status status="PASS" starttime="20221019 17:26:52.017" endtime="20221019 17:27:55.724"/>
 </suite>
-<status status="FAIL" starttime="20221019 16:14:39.749" endtime="20221019 16:15:28.819"/>
+<status status="PASS" starttime="20221019 17:26:51.962" endtime="20221019 17:27:55.728"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Login Tests">Login Tests</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1" name="Valid Login">Login Tests.Valid Login</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login Tests">Login Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Valid Login">Login Tests.Valid Login</stat>
 </suite>
 </statistics>
 <errors>

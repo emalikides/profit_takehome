@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation     A test suite with tests for logging into a dummy reddit.
+Documentation     A test suite with tests for logging into and out of a dummy reddit account.
 ...
 Resource          resource.robot
 
@@ -12,6 +12,7 @@ Valid Login
     Welcome Page Should Be Open
     Click UserDropDown
     DropDownMenu Should Be Visible
+    Click LogOut
     [Teardown]    Close Browser
 
 
