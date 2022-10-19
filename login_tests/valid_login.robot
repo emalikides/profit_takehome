@@ -10,4 +10,8 @@ Valid Login
     Input Password      ${VALID PASSWORD}
     Submit Credentials
     Welcome Page Should Be Open
+    Click UserDropDown
+    DropDownMenu Should Be Visible
     [Teardown]    Close Browser
+
+

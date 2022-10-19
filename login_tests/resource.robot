@@ -41,6 +41,12 @@ Welcome Page Should Be Open
     Location Should Be    https://${SERVER}/
     Title Should Be     Reddit - Dive into anything
 
-Go To Login Page
-    Go To    ${LOGIN URL}
-    Login Page Should Be Open
+Click UserDropDown
+    Click Button         USER_DROPDOWN_ID
+
+DropDownMenu Should Be Visible
+    ${dropdownmenu}=   Get WebElement        css:div[role='menu']
+    Variable Should Exist       ${dropdownmenu}     
+
+
+
