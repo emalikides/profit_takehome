@@ -10,9 +10,13 @@ Valid Login
     Input Password      ${VALID PASSWORD}
     Submit Credentials
     Welcome Page Should Be Open
+Valid DropDown
     Click UserDropDown
     DropDownMenu Should Be Visible
+Valid LogOut
     Click LogOut
+    Sleep       5
+    Username Should Not Be Visible
     [Teardown]    Close Browser
 
 
